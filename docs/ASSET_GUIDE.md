@@ -2,9 +2,10 @@
 
 ## 시각·오디오 기준
 
-- 2D 탑뷰/쿼터뷰, 툰 스타일의 캐주얼 파스텔 톤을 기준으로 합니다. 픽셀 아트는 사용하지 않습니다.
-- 스프라이트는 투명 배경 PNG를 사용합니다. UI 아이콘은 128×128 또는 256×256px, 캐릭터/NPC는 높이 약 512px, 타일은 256×256px 또는 배경 스프라이트는 최대 2048×1536px 기준입니다.
-- 화면은 16:9 및 19:20 비율에 대응합니다. HUD 배치는 안전 영역과 다양한 화면 크기를 고려합니다.
+- 2D 사이드뷰 횡스크롤, 마리오처럼 옆에서 보는 평면 시점을 기준으로 합니다. 탑뷰·쿼터뷰가 아니며 툰 스타일의 캐주얼 파스텔 톤을 사용합니다. 픽셀 아트는 사용하지 않습니다.
+- 스프라이트는 투명 배경 PNG를 사용합니다. UI 아이콘은 128×128 또는 256×256px, 캐릭터/NPC는 높이 약 512px로 맞추고 좌우 이동 방향이 드러나는 사이드뷰 이미지를 준비합니다. 지면·플랫폼 타일은 256×256px, 횡스크롤 배경은 가로형 스프라이트를 기준으로 합니다.
+- 모바일 화면은 가로형 16:9을 기본으로 하며 19:20 비율에서도 플레이어와 진행 방향이 잘 보이도록 카메라와 HUD를 조정합니다.
+- 적 캐릭터는 상인, 어린이, 행인 등 일반 잡몹을 준비합니다. 보스 전용 캐릭터·보스전 에셋은 범위에 포함하지 않습니다.
 - SFX는 WAV/OGG, BGM은 OGG/MP3를 사용합니다.
 
 ## 이름 규칙
@@ -13,9 +14,9 @@
 
 | 종류 | 형식 | 예시 |
 | --- | --- | --- |
-| UI | `UI_[유형]_[이름]_[상태]` | `UI_Bar_PlayerHp.png`, `UI_Gauge_EyeAttack.png` |
-| 캐릭터/NPC | `Char_[타입]_[이름]_[동작]` | `Char_Player_RedEyePigeon_Idle.png`, `Char_NPC_Pigeon_Walk.png` |
-| 환경/오브젝트 | `Env_[유형]_[이름]` | `Env_Food_TrashCan.png`, `Env_Bg_Alleyway.png` |
+| UI | `UI_[유형]_[이름]_[상태]` | `UI_Bar_PlayerHp.png`, `UI_Counter_PigeonCount.png`, `UI_Counter_HumanCount.png`, `UI_Gauge_EyeAttack.png`, `UI_Slot_PoopAttack.png` |
+| 캐릭터/NPC | `Char_[타입]_[이름]_[동작]` | `Char_Player_RedEyePigeon_Idle.png`, `Char_NPC_Pigeon_Walk.png`, `Char_Enemy_Merchant_Walk.png` |
+| 환경/오브젝트 | `Env_[유형]_[이름]` | `Env_Food_TrashCan.png`, `Env_Bg_Alleyway.png`, `Env_Platform_Ground.png` |
 | 효과 | `VFX_[기술/원인]_[효과]` | `VFX_EyeBeam_PinkRay.png`, `VFX_PoopBomb_FlockDrop.png` |
 | 효과음 | `SFX_[이름]` | `SFX_Pigeon_Coo.wav`, `SFX_EyeBeam_Ziririt.wav` |
 | 배경음 | `BGM_[장소/상태]` | `BGM_Stage1_Alley.mp3` |
@@ -37,4 +38,4 @@
 | --- | --- | --- | --- | --- |
 | *(추가 시 기록)* |  |  |  |  |
 
-기획서의 초기 수집 목록은 README의 파트별 소유권과 함께 사용하며, 에셋 수집 상태는 담당 파트가 PR에서 갱신합니다.
+기획서의 초기 수집 목록은 README의 파트별 소유권과 함께 사용하며, 에셋 수집 상태는 담당 파트가 PR에서 갱신합니다. 미니맵 UI용 에셋은 수집하지 않습니다.
