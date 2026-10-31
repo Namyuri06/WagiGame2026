@@ -10,6 +10,7 @@ public sealed class MinionMember : MonoBehaviour
     private MinionRoster roster;
 
     public bool IsRecruited { get; private set; }
+    public MinionRoster Roster => roster;
 
     internal bool TryJoin(MinionRoster targetRoster)
     {
