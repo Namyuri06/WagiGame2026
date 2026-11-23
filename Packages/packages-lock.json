@@ -1,10 +1,16 @@
 {
   "dependencies": {
+<<<<<<< HEAD
+    "com.unity.modules.physics2d": {
+=======
     "com.unity.2d.sprite": {
+>>>>>>> 8cff49145d180954c92b25916104a55672304629
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {}
+<<<<<<< HEAD
+=======
     },
     "com.unity.burst": {
       "version": "1.8.30",
@@ -201,6 +207,7 @@
       "depth": 2,
       "source": "builtin",
       "dependencies": {}
+>>>>>>> 8cff49145d180954c92b25916104a55672304629
     }
   }
 }
