@@ -1,5 +1,10 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "com.unity.modules.physics2d": "1.0.0"
+=======
+    "com.unity.2d.sprite": "1.0.0",
+    "com.unity.physics": "1.4.7"
+>>>>>>> 8cff49145d180954c92b25916104a55672304629
   }
 }
