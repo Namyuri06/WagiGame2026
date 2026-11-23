@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
+<<<<<<< Updated upstream
   productGUID: 8b4d2e462bdda684687ad0e0906cfa8e
+=======
+  productGUID: 89d0429fad69e6e48a6dd3fef2f6b498
+>>>>>>> Stashed changes
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -299,6 +303,7 @@ PlayerSettings:
   androidSymbolsSizeThreshold: 800
   m_BuildTargetIcons: []
   m_BuildTargetPlatformIcons:
+<<<<<<< Updated upstream
   - m_BuildTarget: iPhone
     m_Icons:
     - m_Textures: []
@@ -396,6 +401,8 @@ PlayerSettings:
       m_Height: 1024
       m_Kind: 4
       m_SubKind: App Store
+=======
+>>>>>>> Stashed changes
   - m_BuildTarget: Android
     m_Icons:
     - m_Textures: []
