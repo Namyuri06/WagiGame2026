@@ -11,21 +11,24 @@ public class EnemyHealth : MonoBehaviour
     public float CurrentHealth { get; private set; }
     public float MaxHealth => maxHealth;
     public int ScoreValue => scoreValue;
+    public bool IsRecruited { get; private set; }
 
     public event Action<float, float> OnHealthChanged;
-    public event Action<int> OnDied;
+    public event Action<int> OnRecruited;
 
-    private bool isDead = false;
+    // 기존 코드와의 호환성을 위해 유지
+    public event Action<int> OnDied;
 
     private void Awake()
     {
         maxHealth = Mathf.Max(1f, maxHealth);
         CurrentHealth = maxHealth;
+        IsRecruited = false;
     }
 
     public void TakeDamage(float damage)
     {
-        if (isDead || damage <= 0f)
+        if (IsRecruited || damage <= 0f)
             return;
 
         CurrentHealth = Mathf.Max(0f, CurrentHealth - damage);
@@ -33,18 +36,24 @@ public class EnemyHealth : MonoBehaviour
 
         if (CurrentHealth <= 0f)
         {
-            Die();
+            Recruit();
         }
     }
 
-    private void Die()
+    private void Recruit()
     {
-        if (isDead)
+        if (IsRecruited)
             return;
 
-        isDead = true;
+        IsRecruited = true;
+
+        OnRecruited?.Invoke(scoreValue);
+
+        // 기존 EnemyScoreConnector와의 호환성
         OnDied?.Invoke(scoreValue);
+
+        // 기존 테스트처럼 대상 제거
+        // 실제 포섭 연출은 다른 파트에서 연결 예정
         Destroy(gameObject);
     }
 }
-
